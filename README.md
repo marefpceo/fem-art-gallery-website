@@ -47,7 +47,10 @@ Users should be able to:
 
 ### What I learned
 
+<!-- 
+- Discuss usage of text presets and more specifically the clamp function to scale up and down between viewport widths 
 
+-->
 
 ### Continued development
 

@@ -111,7 +111,7 @@
 }
 
 body {
-  line-height: 1.2;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   height: 100dvh;
@@ -147,9 +147,11 @@ h6 {
 
 p {
   text-wrap: pretty;
+  color: var(--text-secondary);
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  color: var(--text-primary);
 }
 
 /**********************************************************************/
@@ -159,6 +161,49 @@ h1, h2, h3, h4, h5, h6 {
 /**********************************************************************/
 /* #region 3 Global Layout */
 /**********************************************************************/
+
+.text-preset-1 {
+  line-height: 0.9;
+  font-family: var(--heading-font);
+  font-size: clamp(3.75rem, 3.1071rem + 3.2143vw, 6rem);
+}
+
+.text-preset-2 {
+  font-family: var(--heading-font);
+  line-height: clamp(0.9, 0.7857 + 0.0149vw, 1);
+  font-size: clamp(3.4375rem, 2.3661rem + 2.2321vw, 4.375rem);
+}
+
+.text-preset-3 {
+  font-family: var(--heading-font);
+  line-height: clamp(0.9, 0.7857 + 0.0149vw, 1);
+  font-size: clamp(3.125rem, 2.4107rem + 1.4881vw, 3.75rem);
+}
+
+.text-preset-4 {
+  font-family: var(--heading-font);
+  line-height: 1;
+  font-size: 2.25rem;
+}
+
+.text-preset-5 {
+  line-height: 1.4;
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+}
+
+.text-preset-6 {
+  line-height: 0;
+  letter-spacing: 0.2275rem;
+  font-family: var(--heading-font-bold);
+  font-size: 1.25rem;
+}
+
+.text-preset-7 {
+  line-height: 1.4;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+}
 
 
 /**********************************************************************/
