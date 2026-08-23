@@ -81,6 +81,15 @@
   --radius-20: 1.25rem;
   --radius-24: 1.5rem;
   --radius-full: 62.4375rem;
+
+  /* Theme and Color Variables */
+  --body-bg: var(--white-custom);
+
+  --text-primary: var(--grey-900);
+  --text-secondary: var(--grey-700);
+  --text-light: var(--white-custom);
+
+  --accent: var(--gold-500);
 }
 
 /**********************************************************************/
@@ -91,27 +100,24 @@
 /* #region 2 CSS Reset */
 /**********************************************************************/
 
-/* 1. Use a more-intuitive box model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margins */
 * {
   margin: 0;
 }
 
-/* 3. Improve text rendering */
 body {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   height: 100dvh;
+  
 }
 
-/* 4. Improve media defaults */
 img,
 picture,
 video,
@@ -121,7 +127,6 @@ svg {
   max-width: 100%;
 }
 
-/* 5. Inherit fonts for form elements */
 input,
 button,
 textarea,
@@ -130,7 +135,6 @@ select {
   appearance: none;
 }
 
-/* 6. Avoid text overflows */
 p,
 h1,
 h2,
@@ -141,7 +145,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 7. Improve line-wrapping (progressive enhancement) */
 p {
   text-wrap: pretty;
 }
