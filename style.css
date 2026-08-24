@@ -8,6 +8,7 @@
 3. Preset / Utility classes
 4. Components
 5. Global Layout
+6. Section Specific
 
 #################################
 */
@@ -118,7 +119,9 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   height: 100dvh;
-  
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(6.25rem, 0.5357rem + 11.9048vw, 11.25rem);
 }
 
 img,
@@ -155,6 +158,11 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-custom);
 }
 
 /**********************************************************************/
@@ -220,33 +228,40 @@ h1, h2, h3, h4, h5, h6 {
 /* Button base component and  */
 .button {
   display: flex;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
   width: 16.25rem;
   height: 4.5rem;
+  background-color: var(--bg-dark);
+  text-align: center;
 
-  &:focus-visible {
-    outline: 0.25rem solid var(--accent); 
-  }
-
-  & .button-icon {
+  &:hover {
     background-color: var(--accent);
-    color: var(--white-custom);
-    width: 3.5rem;
 
-    &:hover {
+    .button-icon {
       background-color: var(--bg-dark);
     }
   }
+}
 
-  & .button-text {
-    background-color: var(--bg-dark);
+.button-text {
+    text-align: center;
+    width: 100%;
     color: var(--white-custom);
-
-    &:hover {
-      background-color: var(--accent);
-    }
   }
+
+.button:focus-visible {
+  outline: var(--spacing-025) solid var(--accent);
+  outline-offset: 0.2rem;
+}
+
+.button-icon {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  width: 3.5rem;
+  height: 4.5rem;
 }
 
 .button.back {
@@ -261,6 +276,65 @@ h1, h2, h3, h4, h5, h6 {
 /**********************************************************************/
 /* #region 5 Global Layout */
 /**********************************************************************/
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--spacing-400);
+
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-200);
+    gap: var(--spacing-400);
+  }
+}
+
+.dark-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  padding: var(--spacing-600) var(--spacing-300);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+
+    & h2, p {
+      color: var(--text-light);
+    }    
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    background-color: var(--bg-dark);
+    padding: var(--spacing-600) var(--spacing-500);
+
+    & h3, p {
+      color: var(--text-light);
+    }
+
+    .footer-logo {
+      width: 6.875rem;
+      height: 2.49875rem;
+    }
+
+    .social-media-icons {
+      display: flex;
+      gap: var(--spacing-250);
+    }
+  }
+
+
+
+/**********************************************************************/
+/* #endregion */
+
+
+/**********************************************************************/
+/* #region 6 Section Specific */
+/**********************************************************************/
+
 
 
 /**********************************************************************/
