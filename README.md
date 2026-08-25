@@ -50,6 +50,7 @@ Users should be able to:
 <!-- 
 - Discuss usage of text presets and more specifically the clamp function to scale up and down between viewport widths 
 
+- Usage of CSS grid for more responsive overlap vs absolute positioning
 -->
 
 ### Continued development

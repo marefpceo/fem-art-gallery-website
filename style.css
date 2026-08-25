@@ -281,6 +281,25 @@ a {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: var(--spacing-400);
+  position: relative;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .hero-img, .gallery-info {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .gallery-info {
+      z-index: 2;
+      margin-right: var(--spacing-600);
+      justify-self: end;
+      align-self: center;
+      max-width: 21.1875rem;
+    }
+  }
 
   .section-wrapper {
     display: flex;
@@ -334,7 +353,6 @@ a {
 /**********************************************************************/
 /* #region 6 Section Specific */
 /**********************************************************************/
-
 
 
 /**********************************************************************/
