@@ -181,13 +181,13 @@ a {
 
 .text-preset-2 {
   font-family: var(--heading-font);
-  line-height: clamp(0.9, 0.7857 + 0.0149vw, 1);
+  line-height: clamp(90%, 78.57% + 0.0149vw, 100%);
   font-size: clamp(3.4375rem, 2.3661rem + 2.2321vw, 4.375rem);
 }
 
 .text-preset-3 {
   font-family: var(--heading-font);
-  line-height: clamp(0.9, 0.7857 + 0.0149vw, 1);
+  line-height: clamp(90%, 78.57% + 0.0149vw, 100%);
   font-size: clamp(3.125rem, 2.4107rem + 1.4881vw, 3.75rem);
 }
 
