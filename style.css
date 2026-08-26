@@ -336,6 +336,12 @@ a {
       color: var(--text-light);
     }
 
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-500);
+    }
+
     .footer-logo {
       width: 6.875rem;
       height: 2.49875rem;
@@ -344,6 +350,17 @@ a {
     .social-media-icons {
       display: flex;
       gap: var(--spacing-250);
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .footer-info {
+        flex-direction: row;
+        max-width: 28.125rem;
+        gap: var(--spacing-800);
+      }
     }
   }
 
