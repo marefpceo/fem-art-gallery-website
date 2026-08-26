@@ -225,7 +225,7 @@ a {
 /* #region 4 Components */
 /**********************************************************************/
 
-/* Button base component and  */
+/* Button base component  */
 .button {
   display: flex;
   justify-content: space-between;
@@ -266,6 +266,22 @@ a {
 
 .button.back {
   flex-direction: row-reverse;
+}
+
+/* Focus styling for social media links */
+a.icon {
+  max-height: fit-content;
+}
+
+a.icon:focus-visible {
+  outline: var(--spacing-025) solid var(--accent);
+  outline-offset: 0.2rem;
+  transition: 0.3s ease;
+}
+
+a.icon:hover svg path {
+  fill: var(--accent);
+  transition: 0.3s ease;
 }
 
 
@@ -434,7 +450,6 @@ a {
 
     .image2 {
       grid-area: image2;
-      /* align-self: stretch; */
     }
 
     .image3 {
