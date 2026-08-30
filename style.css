@@ -56,6 +56,25 @@
   --heading-font-bold: 'Big Shoulders Display ExtraBold', 'Arial Narrow', Impact, sans-serif;
   --font-body: 'Outfit, Light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Century Gothic, sans-serif;
 
+  /* Font Size */
+  --font-xs: 1.125rem;        /* 18px  */
+  --font-sm: 1.25rem;         /* 20px  */
+  --font-base: 1.375rem;      /* 22px  */
+  --font-lg: 2.25rem;         /* 36px  */
+  --font-xl: clamp(3.125rem, 2.4107rem + 1.4881vw, 3.75rem);    /* 50px - 60px */
+  --font-2xl: clamp(3.4375rem, 2.3661rem + 2.2321vw, 4.375rem);  /* 55px - 70px */
+  --font-3xl: clamp(3.75rem, 3.1071rem + 3.2143vw, 6rem);  /* 60px - 70px - 96px */
+
+  /* Line Height */
+  --tracking-tight: 0.9;
+  --tracking-normal: 1;
+  --tracking-large: 1.4;
+  
+  /* Letter Spacing */
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.182em;
+
+
   /* Spacing */
   --spacing-0: 0;             /* 0px  */
   --spacing-025: 0.125rem;     /* 2px  */
@@ -171,47 +190,43 @@ a {
 /* #region 3 Preset / Utility classes */
 /**********************************************************************/
 
-.text-preset-1 {
-  line-height: 0.9;
+h1 {
+  line-height: var(--tracking-tight);
   font-family: var(--heading-font);
-  font-size: clamp(3.75rem, 3.1071rem + 3.2143vw, 6rem);
+  font-size: var(--font-3xl);
 }
 
-.text-preset-2 {
+h2 {
   font-family: var(--heading-font);
+  font-size: var(--font-xl);
   line-height: clamp(90%, 78.57% + 0.0149vw, 100%);
-  font-size: clamp(3.4375rem, 2.3661rem + 2.2321vw, 4.375rem);
 }
 
-.text-preset-3 {
-  font-family: var(--heading-font);
-  line-height: clamp(90%, 78.57% + 0.0149vw, 100%);
-  font-size: clamp(3.125rem, 2.4107rem + 1.4881vw, 3.75rem);
-}
-
-.text-preset-4 {
-  font-family: var(--heading-font);
-  line-height: 1;
-  font-size: 2.25rem;
-}
-
-.text-preset-5 {
-  line-height: 1.4;
-  font-family: var(--font-body);
-  font-size: 1.375rem;
-}
-
-.text-preset-6 {
-  line-height: 0;
-  letter-spacing: 0.2275rem;
+.button-text {
+  text-align: center;
+  width: 100%;
+  color: var(--white-custom);
   font-family: var(--heading-font-bold);
-  font-size: 1.25rem;
+  font-size: var(--font-sm);
+  line-height: 0;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
-.text-preset-7 {
-  line-height: 1.4;
+.text,
+.footer-text {
   font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-size: var(--font-xs);
+  line-height: var(--tracking-large);
+
+  @media (min-width: 1024px) {
+    font-size: var(--font-base);
+  }
+}
+
+.footer-text {
+  @media (min-width: 1024px) {
+    font-size: var(--font-xs);
+  }
 }
 
 
@@ -242,11 +257,6 @@ a {
   }
 }
 
-.button-text {
-    text-align: center;
-    width: 100%;
-    color: var(--white-custom);
-  }
 
 .button:focus-visible {
   outline: var(--spacing-025) solid var(--accent);
@@ -421,6 +431,11 @@ a.icon:hover svg path {
     .footer-logo {
       width: 6.875rem;
       height: 2.49875rem;
+
+      @media (min-width: 1024px) {
+        width: 9.9375rem;
+        height: 3.625rem;
+      }
     }
 
     .social-media-icons {
@@ -439,7 +454,6 @@ a.icon:hover svg path {
       }
     }
   }
-
 
 
 /**********************************************************************/
