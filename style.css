@@ -19,7 +19,7 @@
 /**********************************************************************/
 
 @font-face {
-  font-family: 'Big Shoulders Display, Black';
+  font-family: "Big Shoulders Display Black";
   src: url('./assets/fonts/BigShouldersDisplay/BigShouldersDisplay-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'Big Shoulders Display, ExtraBold';
+  font-family: "Big Shoulders Display ExtraBold";
   src: url('./assets/fonts/BigShouldersDisplay/BigShouldersDisplay-ExtraBold.ttf') format('truetype');
   font-style: normal;
   font-weight: 800;
@@ -52,8 +52,8 @@
   --white-custom: #ffffff;
   
   /* Typography */
-  --heading-font: 'Big Shoulders Display, Black', 'Arial Narrow', Impact, sans-serif;
-  --heading-font-bold: 'Big Shoulders Display, ExtraBold', 'Arial Narrow', Impact, sans-serif;
+  --heading-font: 'Big Shoulders Display Black', 'Arial Narrow', Impact, sans-serif;
+  --heading-font-bold: 'Big Shoulders Display ExtraBold', 'Arial Narrow', Impact, sans-serif;
   --font-body: 'Outfit, Light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Century Gothic, sans-serif;
 
   /* Spacing */
@@ -119,9 +119,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   height: 100dvh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: clamp(6.25rem, 0.5357rem + 11.9048vw, 11.25rem);
+  background-color: #000000;
 }
 
 img,
@@ -284,6 +282,42 @@ a.icon:hover svg path {
   transition: 0.3s ease;
 }
 
+.logo-div {
+  display: none;
+  background-color: var(--bg-dark);
+  max-width: 28.5rem;
+  z-index: 5;
+
+  & .logo {
+    position: relative;
+    width: 32rem;
+    height: 10.75rem;
+    background-color: var(--bg-light);
+    mask: url('./assets/logo-light.svg') no-repeat center / contain;
+    z-index: 10;
+    top: 24%;
+    left: 27%;
+  }
+
+  & .logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark);
+    mask: url('./assets/logo-dark.svg') no-repeat center / contain;
+    clip-path: inset(0 0 0 62%);
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1; 
+  }
+}
+
 
 /**********************************************************************/
 /* #endregion */
@@ -292,8 +326,18 @@ a.icon:hover svg path {
 /**********************************************************************/
 /* #region 5 Global Layout */
 /**********************************************************************/
+.body-container {
+  max-width: 90rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(6.25rem, 0.5357rem + 11.9048vw, 11.25rem);
+  place-self: center;
+  background-color: var(--bg-light);
+}
 
-.container {
+
+.section-container {
+  position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: var(--spacing-400);
@@ -315,11 +359,27 @@ a.icon:hover svg path {
     }
 
     .gallery-info {
-      z-index: 2;
+      z-index: 3;
       margin-right: var(--spacing-600);
       justify-self: end;
       align-self: center;
       max-width: 21.1875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gallery-info {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+    }
+    .gallery-info h1 {
+      display: none;
+    }
+
+    .hero-img {
+      z-index: 2;
+      place-self: center;
     }
   }
 }
@@ -390,7 +450,7 @@ a.icon:hover svg path {
 /* #region 6 Section Specific */
 /**********************************************************************/
 
-.gallery.container {
+.gallery.section-container {
   @media (min-width: 768px) {
     padding: 0 var(--spacing-500);
     gap: var(--spacing-150);
