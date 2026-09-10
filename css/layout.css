@@ -1,0 +1,134 @@
+/******************/
+/* Global Layout */
+/******************/
+.body-container {
+  max-width: 90rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(6.25rem, 0.5357rem + 11.9048vw, 11.25rem);
+  place-self: center;
+  background-color: var(--bg-light);
+}
+
+
+.section-container {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--spacing-400);
+
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-200);
+    gap: var(--spacing-400);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .hero-img, .gallery-info {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .gallery-info {
+      z-index: 3;
+      margin-right: var(--spacing-600);
+      justify-self: end;
+      align-self: center;
+      max-width: 21.1875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gallery-info {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+    }
+    .gallery-info h1 {
+      display: none;
+    }
+
+    .hero-img {
+      z-index: 2;
+      place-self: center;
+    }
+  }
+}
+
+.dark-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  padding: var(--spacing-600) var(--spacing-300);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+
+    & h2, p {
+      color: var(--text-light);
+    }  
+    
+    @media (min-width: 768px) {
+      padding: var(--spacing-1000) var(--spacing-400);
+    }
+
+    @media (min-width: 1024px) {
+      padding: var(--spacing-400);
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    background-color: var(--bg-dark);
+    padding: var(--spacing-600) var(--spacing-500);
+
+    & h3, p {
+      color: var(--text-light);
+    }
+
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-500);
+    }
+
+    .footer-logo {
+      width: 6.875rem;
+      height: 2.49875rem;
+
+      @media (min-width: 1024px) {
+        width: 9.9375rem;
+        height: 3.625rem;
+      }
+    }
+
+    .social-media-icons {
+      display: flex;
+      gap: var(--spacing-250);
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .footer-info {
+        flex-direction: row;
+        max-width: 28.125rem;
+        gap: var(--spacing-800);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      padding: var(--spacing-1000) 10.3125rem;
+
+      .footer-info {
+        max-width: 45.625rem;
+        justify-content: space-between;
+      }
+    }
+  }
