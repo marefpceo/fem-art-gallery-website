@@ -24,11 +24,11 @@ Users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
-- **Bonus**: Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin
+<!-- - **Bonus**: Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin -->
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/art-gallery-desktop.png)
 
 ### Links
 
@@ -47,18 +47,17 @@ Users should be able to:
 
 ### What I learned
 
-<!-- 
-- Discuss usage of text presets and more specifically the clamp function to scale up and down between viewport widths 
-
-- Usage of CSS grid for more responsive overlap vs absolute positioning
--->
+This was a good challenge for me. What I learned most was determining which type of layout to use and when. I got a lot of good practice working with CSS Grid to layer elements. 
 
 ### Continued development
 
+For future projects, I plan on finding a CSS architecture prior to coding anything. Towards the end of this project, I was having a difficult time finding the classes I needed to update. To make things a little more readable, I loosely followed the SMACSS architecture. After some research, I think my next approach will be based on BEM with a Hybrid Utility file structure.
 
 ### Useful resources
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) - I use this site as reference and to ensure I am coding with best practices in mind. 
+
+- [SMACSS](https://smacss.com/) - I used this site as a reference to model my css architecture.
 
 
 ## Author
@@ -66,5 +65,3 @@ Users should be able to:
 - Website - [Lamar](https://www.lamar-stevens.com)
 - Frontend Mentor - [@marefpceo](https://www.frontendmentor.io/profile/marefpceo)
 - Twitter - [@stevens14704](https://www.twitter.com/stevens14704)
-
-## Acknowledgments
