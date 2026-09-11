@@ -78,6 +78,7 @@ a.icon.alt:hover svg path {
   transition: 0.3s ease;
 }
 
+/************ Logo with two tone effect  ************/
 .logo-div {
   display: none;
   background-color: var(--bg-dark);
@@ -216,7 +217,7 @@ a.icon.alt:hover svg path {
 }
 
 
-/* Location Specific */
+/*********** Location Specific ***********/
 
 .location-map-div {
   position: relative;
