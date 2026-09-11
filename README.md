@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Review code](https://www.github.com/marefpceo/fem-art-gallery-website)
-- Live Site URL: [Visit site](https://marefpceo.githu.io/fem-art-gallery-website)
+- Live Site URL: [Visit site](https://marefpceo.github.io/fem-art-gallery-website)
 
 ## My process
 
