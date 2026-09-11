@@ -10,7 +10,13 @@
   <body>
     <div class='body-container location'>
       <div class='location-map-div'>
-        <a href='index.html' class='button' tabindex='0'>
+        <picture class='map-img'>
+          <source media='(min-width: 1024px)' srcset='./assets/desktop/image-map.png 1x, ./assets/desktop/image-map@2x.png 2x' >
+          <source media='(min-width: 768px)' srcset='./assets/tablet/image-map.png 1x, ./assets/tablet/image-map@2x.png 2x' >
+          <source srcset='./assets/mobile/image-map@2x.png'>
+          <img src='./assets/mobile/image-map.png' alt=''>
+        </picture>
+        <a href='index.html' class='button location' tabindex='0'>
           <div class='button-icon'>
             <img src='./assets/icon-arrow-left.svg' alt='' class='hero-image'>
           </div>

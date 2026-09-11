@@ -11,9 +11,9 @@
 }
 
 .body-container.location {
+  background-color: var(--bg-dark);
   gap: 0;
 }
-
 
 .section-container {
   position: relative;
@@ -60,6 +60,23 @@
       z-index: 2;
       place-self: center;
     }
+  }
+}
+
+.location-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-600);
+  padding: 5rem var(--spacing-200);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 5rem var(--spacing-500);
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 8.125rem 10.3125rem;
   }
 }
 

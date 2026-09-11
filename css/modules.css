@@ -17,6 +17,21 @@
   }
 }
 
+.button.location {
+  position: absolute;
+  grid-row: 1;
+  z-index: 5;
+  top: var(--spacing-100);
+  left: var(--spacing-100);
+
+  @media (min-width: 768px) {
+    left: var(--spacing-500);
+  }
+
+  @media (min-width: 1024px) {
+    left: 10.3125rem;
+  }
+}
 
 .button:focus-visible {
   outline: var(--spacing-025) solid var(--accent);
@@ -204,32 +219,26 @@ a.icon.alt:hover svg path {
 /* Location Specific */
 
 .location-map-div {
-  background-image: url('../assets/mobile/image-map.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  display: grid;
   min-width: 20rem;
-  height: 34.375rem;
-  padding: 0.5rem;
-
-  @media (-webkit-device-pixel-ratio: 2), (min-resolution: 2ddpx) {
-    .location {
-      background-image: url('../assets/mobile/image-map@2x.png');
-    }
-  }
+  grid-template-columns: auto;
+  grid-template-rows: auto;
 }
 
+.map-location-img {
+  z-index: 1;
+  height: 100%;
+}
 
 .location-info-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-600);
-  padding: 5rem var(--spacing-200);
   background-color: var(--bg-dark);
   color: var(--text-light);
 
   h1 {
     color: var(--text-light);
+    font-size: var(--font-2xl);
+    max-width: 21.875rem;
   }
 
   address {
@@ -250,6 +259,7 @@ a.icon.alt:hover svg path {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-250);
+    max-width: 33.75rem;
   }
 
   #highlight {
