@@ -10,6 +10,10 @@
   background-color: var(--bg-light);
 }
 
+.body-container.location {
+  gap: 0;
+}
+
 
 .section-container {
   position: relative;
@@ -130,5 +134,13 @@
         max-width: 45.625rem;
         justify-content: space-between;
       }
+    }
+  }
+
+  .footer.alternate {
+    background-color: var(--accent);
+    
+    & p {
+      color: var(--text-primary);
     }
   }

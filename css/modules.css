@@ -52,6 +52,17 @@ a.icon:hover svg path {
   transition: 0.3s ease;
 }
 
+a.icon.alt:focus-visible {
+  outline: var(--spacing-025) solid var(--bg-dark);
+  outline-offset: 0.2rem;
+  transition: 0.3s ease;
+}
+
+a.icon.alt:hover svg path {
+  fill: var(--text-light);
+  transition: 0.3s ease;
+}
+
 .logo-div {
   display: none;
   background-color: var(--bg-dark);
@@ -186,5 +197,65 @@ a.icon:hover svg path {
     .image2 {
       object-fit: cover;
     }
+  }
+}
+
+
+/* Location Specific */
+
+.location-map-div {
+  background-image: url('../assets/mobile/image-map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 20rem;
+  height: 34.375rem;
+  padding: 0.5rem;
+
+  @media (-webkit-device-pixel-ratio: 2), (min-resolution: 2ddpx) {
+    .location {
+      background-image: url('../assets/mobile/image-map@2x.png');
+    }
+  }
+}
+
+
+.location-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-600);
+  padding: 5rem var(--spacing-200);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+
+  h1 {
+    color: var(--text-light);
+  }
+
+  address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p, 
+  .address-div {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: var(--font-xs);
+    line-height: var(--tracking-large);
+  }
+
+  .address-div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-250);
+  }
+
+  #highlight {
+    font-style: normal;
+    font-family: var(--heading-font-bold);
+    font-size: var(--font-lg);
+    color: var(--accent);
   }
 }
